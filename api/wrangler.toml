@@ -1,0 +1,25 @@
+name = "t4-api"
+compatibility_date = "2023-09-22"
+send_metrics = false
+node_compat = true
+main = "src/worker.ts"
+account_id = "43c2ffd44e6d8e9f803e5b508210044c"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "fit-dev"
+database_id = "060324cb-af64-42bc-82dc-8642ed5956a1"
+migrations_dir = "migrations"
+
+# The necessary secrets are:
+# - APP_URL - for preventing CORS errors
+# - JWT_VERIFICATION_KEY - for Supabase @link https://supabase.com
+#
+# For local development, you can create a file called .dev.vars and use dotenv syntax.
+#
+# For deployed environments, you can use wrangler secrets to set these values.
+# For example:
+# Run `echo <VALUE> | wrangler secret put <NAME>` for each of these
+# Or use the Cloudflare web interface.
+# @link https://developers.cloudflare.com/workers/platform/environment-variables/#environment-variables-via-the-dashboard
+#
